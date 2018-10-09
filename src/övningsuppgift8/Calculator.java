@@ -1,8 +1,5 @@
 package övningsuppgift8;
 
-import java.util.Scanner;
-import övningsuppgift8.OperatorNotSupportedException;
-
 
 public class Calculator  {
     

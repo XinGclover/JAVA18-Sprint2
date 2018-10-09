@@ -8,7 +8,6 @@ public class Övningsuppgift1 {
 
     protected double getInParam(String promptMessage){
         System.out.println(promptMessage);
-        System.out.flush();
         return sc.nextDouble();
     }
     

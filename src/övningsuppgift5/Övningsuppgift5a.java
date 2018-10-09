@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.text.NumberFormat;
 import java.util.Locale;
-import java.util.Scanner;
 
 
 public class Övningsuppgift5a {

@@ -1,12 +1,8 @@
 package övningsuppgift6;
 
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,17 +18,12 @@ public class Övningsuppgift6 {
         String firstLine;
         String secondLine;
         Path inFilePath;
-        String filePath = "src\\övningsuppgift6\\Personuppgifter.txt";
+        String filePath = "src\\övningsuppgift6\\Personuppgifter .txt";
         String outFilePathString = "src\\övningsuppgift6\\TallPeopleInformation.txt";
         Path outFilePath = Paths.get("src\\övningsuppgift6\\TallPeopleInformation.txt");
         
         String[] personDataParts;
         
-        //Uppgift 6b, try with resources, gamla sättet
-        //try(PrintWriter w = new PrintWriter(new BufferedWriter(
-        //        new FileWriter(outFilePathString)))){
-               
-        //Uppgift 6b, try with resources, nya sättet med Paths och Files
         try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
             {
             
@@ -53,19 +44,17 @@ public class Övningsuppgift6 {
         }
         catch (FileNotFoundException e){
             System.out.println("Filen kunde inte hittas");
-            System.out.flush();
+            e.printStackTrace();
             System.exit(0);
        }
         catch (IOException e){
             System.out.println("Det gick inte att skriva till fil");
             e.printStackTrace();
-            System.out.flush();
             System.exit(0);
         }
         catch (Exception e){
             System.out.println("Något gick fel");
             e.printStackTrace();
-            System.out.flush();
             System.exit(0);
         }
         //finally behövs inte när vi har try-with-resources
