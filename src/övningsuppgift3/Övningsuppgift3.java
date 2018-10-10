@@ -22,11 +22,12 @@ public class Övningsuppgift3 {
             pengatyp = mynt;
         }
         if (amountOfValör > 0){
-            //s += s.format("Antal %d-%s: %d\n",amount,pengatyp,antal);
+            //för uppgift 3a
+           s += s.format("Antal %d-%s: %d\n",valör,pengatyp,amountOfValör);
             
             //för uppgift 3b
-            sb.append("Antal ").append(valör).append("-").append(pengatyp)
-                    .append(": ").append(amountOfValör).append("\n");
+          //  sb.append("Antal ").append(valör).append("-").append(pengatyp)
+          //          .append(": ").append(amountOfValör).append("\n");
         }
     }
     
@@ -54,11 +55,11 @@ public class Övningsuppgift3 {
                 addToPrintoutString(sedlarOchMynt[i], amountOfValör);
                 change -= (amountOfValör*sedlarOchMynt[i]);
             }
-
-            //System.out.println(s);
+            //för uppgift 3a
+            System.out.println(s);
             
             //för uppgift 3b
-            System.out.println(sb);
+           // System.out.println(sb);
             
         }
         catch (InputMismatchException e) {
@@ -69,6 +70,7 @@ public class Övningsuppgift3 {
         }
         catch (Exception e) {
             System.out.println("Ospecifierat fel inträffade, försök igen!");
+            e.printStackTrace();
         }
         
     }

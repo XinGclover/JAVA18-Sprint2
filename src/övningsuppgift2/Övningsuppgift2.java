@@ -21,7 +21,7 @@ public class Övningsuppgift2 {
             if (indata == null)
                 System.exit(0);  // Användaren klickade på "Avbryt"
             Scanner sc = new Scanner(indata);
-            //sc.useDelimiter("\\s*;\\s*");
+            
             String felText = "";
             try {
                 antalDagar  = sc.nextInt(); 
@@ -30,6 +30,7 @@ public class Övningsuppgift2 {
                 klar = true;
             }
             catch (InputMismatchException e) {
+                e.printStackTrace();
                 felText = "Felaktigt tal!";
             }
             catch (NoSuchElementException e) {
@@ -39,7 +40,8 @@ public class Övningsuppgift2 {
                 felText = "Ospecifierat fel inträffade, försök igen!";
             }
             if (! klar)
-                indata = showInputDialog(felText + "\nAnge antal dagar, pris per dag samt bilmodell");
+                indata = showInputDialog(felText 
+                        + "\nAnge antal dagar, pris per dag samt bilmodell");
         }
         double totPris = dagsPris * antalDagar;
         String s = String.format("Totalt pris för %s: %.2f", bil, totPris);
