@@ -1,22 +1,31 @@
 package ExceptionDemo;
 
 public class ExceptionDemo {
-    void method()throws ArithmeticException{  
-        throw new ArithmeticException("ArithmeticException Occurred");  
+    void method()throws TestException{  
+        throw new TestException("TestException Occurred");  
     }  
 
-    public static void main(String args[]){
+    void firstMethod()throws TestException{  
+        //throw new TestException("TestException Occurred");
+        
+            method();
+        
+    }
+    
+    
+    public static void main (String args[])throws Exception{
         ExceptionDemo obj=new ExceptionDemo(); 
-        try{
-            obj.method(); 
+      //  try{
+            obj.firstMethod(); 
             System.out.println("Stuff in try clause");
-        }
-        catch (ArithmeticException ae){
-            System.out.println("Catch");
-        }
-        finally{
-            System.out.println("Finally");
-        }
+       // }
+       // catch (TestException ae){
+//            ae.printStackTrace();
+//            System.out.println("Catch");
+//        }
+//        finally{
+//            System.out.println("Finally");
+//        }
         System.out.println("End Of Program");  
     }  
 }

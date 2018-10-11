@@ -13,7 +13,8 @@ public class Övningsuppgift3 {
     private final static String mynt = new String("kronor");
     private final static String sedlar = new String("lappar");
     
-    public static void addToPrintoutString(int valör, int amountOfValör){
+    public static void addToPrintoutString(int valör, 
+            int amountOfValör){
         String pengatyp = new String();
         if (valör >= 20){
             pengatyp = sedlar;
@@ -49,6 +50,11 @@ public class Övningsuppgift3 {
             
             System.out.println("Detta ska du få tillbaka:");
             int amountOfValör;
+            
+            if (change == 0){
+                System.out.println("0 kr");
+                System.exit(0);
+            }
             
             for(int i = 0; i < sedlarOchMynt.length; i++){
                 amountOfValör = change / sedlarOchMynt[i];
