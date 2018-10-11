@@ -1,6 +1,6 @@
 package PathDemo;
 
-import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -9,7 +9,6 @@ import static java.nio.file.LinkOption.NOFOLLOW_LINKS;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
-import java.nio.file.StandardOpenOption;
 
 
 public class PathDemo {
@@ -29,18 +28,18 @@ public class PathDemo {
         System.out.format("getParent: %s%n", path.getParent());
         System.out.format("getRoot: %s%n", path.getRoot());
           
-        if (!Files.exists(path, NOFOLLOW_LINKS)){
-            Files.createFile(path);
-            BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
-            writer.write("nu skriver vi i vår fil");
-            writer.flush();
-        }
+//        if (!Files.exists(path, NOFOLLOW_LINKS)){
+//            Files.createFile(path);
+//            BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
+//            writer.write("nu skriver vi i vår fil");
+//            writer.flush();
+//        }
         
-       Path path2 = Paths.get("src\\PathDemo\\filnamn2");
+//       Path path2 = Paths.get("src\\PathDemo\\filnamn2");
+//        
+//        Files.copy(path, path2, REPLACE_EXISTING );
         
-        Files.copy(path, path2, REPLACE_EXISTING );
-        
-       // Files.delete(path2);
+ //       Files.delete(path2);
         
     }
 

@@ -23,8 +23,9 @@ public class Övningsuppgift5a {
                 //bort med End of Line-tecknet och eventuella blanktecken som kan gömma sig i filen
                 tempLine.trim();
                 
-                String replaced = tempLine.replaceAll("\\,", "\\.");
-                System.out.println("replaced "+replaced);
+                //String replaced = tempLine.replaceAll("\\,", "\\.");
+                String replaced = tempLine.replaceAll(",", ".");
+                //System.out.println("replaced "+replaced);
                 
                 //Detta kan också göras genom att byta ut kommat till en punkt med replaceAll(...) och sen köra Double.parseDouble(tempLine)
                 NumberFormat format = NumberFormat.getInstance(Locale.FRANCE);
@@ -48,7 +49,8 @@ public class Övningsuppgift5a {
             System.exit(0);
         }
         
-        System.out.printf("Maxtemp är %.1f, mintemp är %.1f, medelvärdet är %.1f (beräknat över %d dagar)", 
+        System.out.printf("Maxtemp är %.1f, mintemp är %.1f, "
+                + "medelvärdet är %.1f (beräknat över %d dagar)", 
                 maxTemp, minTemp, tempSum/amountOfDays, amountOfDays);
     }
     

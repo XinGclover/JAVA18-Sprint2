@@ -13,7 +13,7 @@ public class Övningsuppgift5b {
         double maxTemp = -Double.MAX_VALUE;
         double minTemp = Double.MAX_VALUE;
         try{
-            Scanner sc = new Scanner(file);
+            Scanner sc = new Scanner(new File("src\\övningsuppgift5\\temp.txt"));
             while(sc.hasNext()){
                 temp = sc.nextDouble();
                 if (temp > maxTemp) {

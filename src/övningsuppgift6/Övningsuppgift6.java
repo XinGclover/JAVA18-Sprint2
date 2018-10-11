@@ -18,7 +18,7 @@ public class Övningsuppgift6 {
         String firstLine;
         String secondLine;
         Path inFilePath;
-        String filePath = "src\\övningsuppgift6\\Personuppgifter .txt";
+        String filePath = "src\\övningsuppgift6\\Personuppgifter.txt";
         String outFilePathString = "src\\övningsuppgift6\\TallPeopleInformation.txt";
         Path outFilePath = Paths.get("src\\övningsuppgift6\\TallPeopleInformation.txt");
         
