@@ -23,12 +23,10 @@ public class Övningsuppgift6 {
         Path outFilePath = Paths.get("src\\övningsuppgift6\\TallPeopleInformation.txt");
         
         String[] personDataParts;
+        inFilePath = Paths.get(filePath);
         
-        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
-            {
-            
-            inFilePath = Paths.get(filePath);
-            Scanner fileScanner = new Scanner(inFilePath);
+        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));
+               Scanner fileScanner = new Scanner(inFilePath);){
             
             while(fileScanner.hasNext()){
                 firstLine = fileScanner.nextLine();
