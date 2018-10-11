@@ -7,9 +7,7 @@ public class ExceptionDemo {
 
     void firstMethod()throws TestException{  
         //throw new TestException("TestException Occurred");
-        
             method();
-        
     }
     
     

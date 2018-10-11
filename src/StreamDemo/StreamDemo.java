@@ -7,31 +7,41 @@ import java.io.FileReader;
 public class StreamDemo {
     
     public static void main(String[] args){
-        String tempLine;
+        String tempLine = "";
         int tempInt = 0;
+        BufferedReader bufIn = null;
+        
         try {
-         //   med BufferedReader kan vi läsa en rad i taget
-            BufferedReader bufIn = new BufferedReader
+            bufIn = new BufferedReader
                 (new FileReader ("src\\StreamDemo\\Luka.txt"));
             
-            while(true){
-                tempLine = bufIn.readLine();
-                System.out.println(tempLine);
-            }
+         //   med BufferedReader kan vi läsa en rad i taget
             
-//            FileReader fileIn = new FileReader("src\\StreamDemo\\Luka.txt");
-//            
-//            while(tempInt != -1){
-//               // tempInt = fileIn.read();
-//                tempInt = fileIn.read();
-//                System.out.println(tempInt);
-//                // Vi måste casta intarna till char
-//                //System.out.println((char)tempInt);
+//            while(tempLine != null){
+//                tempLine = bufIn.readLine();
+//                System.out.println(tempLine);
 //            }
+            
+            //vi slipper null på slutet
+//            while((tempLine = bufIn.readLine()) != null){
+//                System.out.println(tempLine);
+//            }
+//            
+//            
+            FileReader fileIn = new FileReader(
+                    "src\\StreamDemo\\Luka.txt");
+            
+            while(tempInt != -1){
+                tempInt = fileIn.read();
+               // System.out.println(tempInt);
+               // Vi måste casta intarna till char
+                System.out.println((char)tempInt);
+            }
         }
         catch (Exception e){
             System.out.println("Could not read from file");
         }
+
     }
 }
 

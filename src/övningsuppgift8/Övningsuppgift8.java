@@ -18,7 +18,8 @@ public class Övningsuppgift8 {
         String svar = "";
 
         while(true){
-            indata = JOptionPane.showInputDialog(svar + "Skriv ett uttryck");
+            indata = JOptionPane.showInputDialog(svar + 
+                    "Skriv ett uttryck");
             
             if (indata == null){
               System.exit(0);
@@ -28,7 +29,8 @@ public class Övningsuppgift8 {
                 firstNumber = sc.nextDouble();
                 operator = sc.next();
                 secondNumber = sc.nextDouble();
-                result = calculator.calculate(firstNumber, secondNumber, operator);
+                result = calculator
+                  .calculate(firstNumber, secondNumber, operator);
                 svar = "Svaret blev " +result+". " ;
             }
             catch (InputMismatchException e){
